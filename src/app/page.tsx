@@ -2,41 +2,46 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex-row items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-row row-start-1 items-center justify-between w-full">
+    <div className="flex-row items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-[url('/background.png')] bg-center">
+      <main className="flex flex-row items-center justify-between w-full">
         <main className="flex flex-row">
-          <main className="transition-colors flex items-center justify-center bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto">
+          <main className="transition-colors flex items-center justify-center bg-foreground text-background font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto">
               Website for ME
           </main>
 
-          <main className="transition-colors flex items-center justify-center bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto">
-              Website for ME
-          </main>
+          <a
+          className=" flex items-center  gap-2 justify-center bg-[#383838] text-white hover:text-white font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+          href=""
+          target="_Parent"
+          rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert"
+              src="/homeicon.svg"
+              alt="home.svg"
+              width={15}
+              height={13}
+              priority
+            />
+           
+            
+            home
+          </a>
         </main>
 
         
       </main>
-      <main className="flex flex-col gap-[32px] row-start-2 items-center">
+
+
+      <main className="flex flex-col gap-[32px] sm:flex-row items-center">
         <Image
-          className="dark:invert"
+          className= "w-screen sm:w-1/2 flex-shrink-0"
           src="/next.svg"
           alt="Next.js logo"
-          width={180}
+          width={200}
           height={38}
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
@@ -64,7 +69,7 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <main className=" flex gap-[24px]  items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -110,7 +115,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </main>
     </div>
   );
 }
