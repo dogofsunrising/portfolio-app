@@ -2,13 +2,21 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[60px_1fr_20px] min-h-screen ">
-      <main className="flex flex-col-[140px_1fr] row-start-1">
-        <div className="relative">
-          <div className="absolute left-0">左上に固定する</div>
-        </div>
+    <div className="flex-row items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-row row-start-1 items-center justify-between w-full">
+        <main className="flex flex-row">
+          <main className="transition-colors flex items-center justify-center bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto">
+              Website for ME
+          </main>
+
+          <main className="transition-colors flex items-center justify-center bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto">
+              Website for ME
+          </main>
+        </main>
+
+        
       </main>
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center">
         <Image
           className="dark:invert"
           src="/next.svg"
